@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Pack SVGs into JSON + PNG sprites.
+# https://github.com/mapbox/spritezero-cli
+spritezero --ratio=1 maki    svgs
+spritezero --ratio=2 maki@2x svgs
+spritezero --ratio=4 maki@4x svgs
+spritezero --ratio=8 maki@8x svgs
+
+# Rename to match OpenMapTiles Vector Tile Schema.
+# https://openmaptiles.org/schema/
+sed -i "s/-/_/g" maki*.json
+sed -i "s/bicycle_share/bicycle_rental/g" maki*.json
+sed -i "s/rail_/railway_/g" maki*.json
+mv -fv maki*.json maki*.png ..

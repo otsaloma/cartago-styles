@@ -1,0 +1,26 @@
+{
+    "data": {
+        "openmaptiles": {
+            "mbtiles": "planet.mbtiles"
+        }
+    },
+    "options": {
+        "maxScaleFactor": 8,
+        "maxSize": 2048,
+        "paths": {
+            "root": "",
+            "fonts": "fonts",
+            "mbtiles": "mbtiles",
+            "sprites": "sprites",
+            "styles": "styles"
+        }
+    },
+    "styles": {
+        "cartago-streets": {
+            "style": "cartago-streets.json"
+        },
+        "cartago-streets-english": {
+            "style": "cartago-streets-english.json"
+        }
+    }
+}
