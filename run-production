@@ -2,4 +2,4 @@
 # We need xvfb-run when running on a production server with no GUI.
 # https://github.com/klokantech/tileserver-gl/blob/master/run.sh
 xvfb-run -s "-screen 0 1024x768x24 -ac +extension GLX +render -noreset" \
-         tileserver-gl "$@"
+         tileserver-gl -p 8001
