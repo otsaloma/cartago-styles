@@ -8,7 +8,7 @@ urls = [
 ]
 def p(message):
     print(message, end="", flush=True)
-for z in range(8):
+for z in range(9):
     p("\n{:d}: {:d} ".format(z, (2**z)*(2**z)*2))
     xs = range(2**z)
     ys = range(2**z)
