@@ -9,12 +9,14 @@ urls = [
 def p(message):
     print(message, end="", flush=True)
 for z in range(9):
-    p("\n{:d}: {:d} ".format(z, (2**z)*(2**z)*2))
     xs = range(2**z)
     ys = range(2**z)
+    left = len(xs) * len(ys) * len(scales) * len(urls)
+    p("\n{:d}:{:d}".format(z, left))
     for item in itertools.product(xs, ys, scales, urls):
         x, y, scale, url = item
-        p(".")
+        left = left - 1
+        p("{:d}:{:d}".format(z, left) if left % 100 == 0 else ".")
         response = rs.get(url.format(**locals()))
         if response.status_code != 200:
-            p(response.status_code)
+            p("HTTP:{:d}".format(response.status_code))
