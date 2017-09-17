@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-    <title>Cartago Map Styles</title>
+    <title>Cartago Raster Maps Demo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.min.css">
     <style>
       body {
@@ -25,19 +25,15 @@
     <script>
       var map = L.map("map", {
           attributionControl: false,
-          center: [51.50778, -0.12812],
+          center: [51.508, -0.128],
           zoom: 3,
       });
       var layers = {
-          "Cartago Streets": "http://localhost:8080/styles/cartago-streets/{z}/{x}/{y}{r}.png",
-          "Cartago Streets English": "http://localhost:8080/styles/cartago-streets-english/{z}/{x}/{y}{r}.png"
+          "Cartago Streets": L.tileLayer("http://localhost:8080/styles/cartago-streets/{z}/{x}/{y}{r}.png"),
+          "Cartago Streets English": L.tileLayer("http://localhost:8080/styles/cartago-streets-english/{z}/{x}/{y}{r}.png"),
       };
-      for (var name in layers)
-          layers[name] = L.tileLayer(layers[name], {maxZoom: 20});
-      var layer = layers[localStorage.getItem("layer")];
-      map.addLayer(layer || layers["Cartago Streets"]);
+      map.addLayer(layers["Cartago Streets"]);
       map.addControl(L.control.layers(layers));
-      map.on("baselayerchange", e => localStorage.setItem("layer", e.name));
       var hash = new L.Hash(map);
     </script>
   </body>

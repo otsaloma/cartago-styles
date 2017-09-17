@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>Cartago Vector Maps Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mapbox-gl@0.40.0/dist/mapbox-gl.min.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/npm/mapbox-gl@0.40.0/dist/mapbox-gl.min.js"></script>
+    <script>
+      var map = new mapboxgl.Map({
+          center: [-0.128, 51.508],
+          container: "map",
+          hash: true,
+          style: "http://localhost:8080/styles/cartago-streets/style.json",
+          zoom: 3,
+      });
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
+  </body>
+</html>
