@@ -1,0 +1,15 @@
+#!/bin/sh
+PIDS=""
+for ROUND in $(seq 1000); do
+    Z=16
+    X=$(shuf -n1 -i0-65536)
+    Y=$(shuf -n1 -i0-65536)
+    R=$(shuf -n1 -e "" @2x @3x @4x)
+    URL="http://localhost:8001/styles/cartago-streets/$Z/$X/$Y$R.png"
+    echo "$URL"
+    curl -s -o /dev/null "$URL" &
+    PIDS="$PIDS $!"
+    sleep 0.001
+done
+echo "Waiting for requests to complete..."
+wait $PIDS
