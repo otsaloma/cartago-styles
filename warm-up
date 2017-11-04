@@ -1,5 +1,5 @@
 #!/bin/sh
-for STYLE in cartago-streets cartago-streets-english; do
+for STYLE in cartago-light cartago-light-english cartago-streets cartago-streets-english; do
     for SCALE in "" @2x @3x @4x; do
         PIDS=""
         for ROUND in $(seq 100); do

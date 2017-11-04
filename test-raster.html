@@ -31,9 +31,13 @@
       var layers = {
           "Cartago Streets": L.tileLayer("http://localhost:8080/styles/cartago-streets/{z}/{x}/{y}{r}.png"),
           "Cartago Streets English": L.tileLayer("http://localhost:8080/styles/cartago-streets-english/{z}/{x}/{y}{r}.png"),
+          "Cartago Light": L.tileLayer("http://localhost:8080/styles/cartago-light/{z}/{x}/{y}{r}.png"),
+          "Cartago Light English": L.tileLayer("http://localhost:8080/styles/cartago-light-english/{z}/{x}/{y}{r}.png"),
       };
-      map.addLayer(layers["Cartago Streets"]);
+      var layer = layers[localStorage.getItem("layer")];
+      map.addLayer(layer || layers["Cartago Streets"]);
       map.addControl(L.control.layers(layers));
+      map.on("baselayerchange", e => localStorage.setItem("layer", e.name));
       var hash = new L.Hash(map);
     </script>
   </body>

@@ -8,6 +8,8 @@
         "frontPage": true,
         "maxScaleFactor": 8,
         "maxSize": 2048,
+        "minRendererPoolSizes": [5],
+        "maxRendererPoolSizes": [5],
         "paths": {
             "root": "",
             "fonts": "fonts",
@@ -17,6 +19,12 @@
         }
     },
     "styles": {
+        "cartago-light": {
+            "style": "cartago-light.json"
+        },
+        "cartago-light-english": {
+            "style": "cartago-light-english.json"
+        },
         "cartago-streets": {
             "style": "cartago-streets.json"
         },
