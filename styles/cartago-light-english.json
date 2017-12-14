@@ -1506,10 +1506,7 @@
             "layout": {
                 "symbol-placement": "line",
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-max-width": 5,
                 "text-size": 12
             },
@@ -1529,10 +1526,7 @@
             "filter": ["==", "$type", "Point"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-max-width": 5,
                 "text-size": 12
             },
@@ -1553,10 +1547,7 @@
             "layout": {
                 "text-anchor": "center",
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-size": {
                     "stops": [
                         [13, 12],
@@ -1584,10 +1575,7 @@
             "filter": ["==", "class", "island"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-max-width": 8,
                 "text-padding": 16,
@@ -1617,10 +1605,7 @@
             "filter": ["in", "class", "neighbourhood", "suburb"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-padding": 8,
                 "text-size": {
@@ -1650,10 +1635,7 @@
             "filter": ["in", "class", "village", "hamlet"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-padding": 8,
                 "text-size": {
@@ -1682,10 +1664,7 @@
             "filter": ["==", "class", "town"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-offset": [0, -0.2],
                 "text-padding": 8,
@@ -1723,10 +1702,7 @@
                 "icon-size": 0.333,
                 "text-anchor": "bottom",
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-offset": {
                     "stops": [
@@ -1761,10 +1737,7 @@
             "filter": ["==", "class", "state"],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-max-width": 8,
                 "text-padding": 4,
@@ -1799,10 +1772,7 @@
             ],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.1,
                 "text-max-width": 8,
                 "text-padding": 4,
@@ -1837,10 +1807,7 @@
             ],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.25,
                 "text-max-width": 8,
                 "text-padding": 4,
@@ -1875,10 +1842,7 @@
             ],
             "layout": {
                 "text-field": "{name_en}",
-                "text-font": [
-                    "Klokantech Noto Sans Regular",
-                    "Klokantech Noto Sans CJK Regular"
-                ],
+                "text-font": ["Noto Sans Regular"],
                 "text-letter-spacing": 0.4,
                 "text-max-width": 8,
                 "text-padding": 4,
