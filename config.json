@@ -16,7 +16,8 @@
             "mbtiles": "mbtiles",
             "sprites": "sprites",
             "styles": "styles"
-        }
+        },
+        "serveAllFonts": true
     },
     "styles": {
         "cartago-light": {
