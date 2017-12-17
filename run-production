@@ -1,5 +1,11 @@
 #!/bin/sh
 export NODE_ENV=production
+# Replicate fonts to provide Mapbox GL standard ones.
+# https://github.com/otsaloma/cartago-styles/issues/1
+for VARIANT in Regular Bold Italic; do
+    cp -ru "fonts/Noto Sans $VARIANT" "fonts/Open Sans $VARIANT"
+    cp -ru "fonts/Noto Sans $VARIANT" "fonts/Open Sans $VARIANT,Arial Unicode MS $VARIANT"
+done
 # We need xvfb-run when running on a production server with no GUI.
 # https://github.com/klokantech/tileserver-gl/blob/master/run.sh
 xvfb-run -s "-screen 0 1024x768x24 -ac +extension GLX +render -noreset" \
