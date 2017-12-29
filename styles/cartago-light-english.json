@@ -206,14 +206,14 @@
                 "line-cap": "butt",
                 "line-join": "round"
             },
-            "minzoom": 13.5,
+            "minzoom": 14.5,
             "paint": {
                 "line-color": "#fefefd",
                 "line-dasharray": [0.01, 2],
                 "line-opacity": {
                     "stops": [
-                        [14, 0.25],
-                        [15, 0.35]
+                        [15, 0.25],
+                        [16, 0.35]
                     ]
                 },
                 "line-width": {
@@ -1011,14 +1011,14 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
-            "minzoom": 13.5,
+            "minzoom": 14.5,
             "paint": {
                 "line-color": "#fefefd",
                 "line-dasharray": [0.01, 2],
                 "line-opacity": {
                     "stops": [
-                        [14, 0.7],
-                        [15, 1]
+                        [15, 0.7],
+                        [16, 1]
                     ]
                 },
                 "line-width": {
