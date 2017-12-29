@@ -16,7 +16,7 @@
         {
             "id": "background",
             "paint": {
-                "background-color": "#e3e3e3"
+                "background-color": "#e5e3e1"
             },
             "type": "background"
         },
@@ -614,14 +614,14 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
-            "minzoom": 13.5,
+            "minzoom": 14.5,
             "paint": {
                 "line-color": "#fefefd",
                 "line-dasharray": [0.01, 2],
                 "line-opacity": {
                     "stops": [
-                        [14, 0.5],
-                        [15, 0.7]
+                        [15, 0.5],
+                        [16, 0.7]
                     ]
                 },
                 "line-width": {

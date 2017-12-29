@@ -605,11 +605,11 @@
             "id": "building_outline",
             "minzoom": 14.5,
             "paint": {
-                "line-color": "#fefefd",
-                "line-opacity": 0.3,
+                "line-color": "#bcb8b8",
+                "line-opacity": 0.7,
                 "line-width": {
                     "stops": [
-                        [15, 1],
+                        [14, 1],
                         [16, 2]
                     ]
                 }
@@ -620,29 +620,16 @@
         },
 
         {
-            "id": "building_shadow",
-            "minzoom": 14.5,
-            "paint": {
-                "fill-color": "#bcb8b8",
-                "fill-translate": {
-                    "stops": [
-                        [15, [0, 2]],
-                        [16, [0, 3]],
-                        [17, [0, 4]],
-                        [18, [0, 5]]
-                    ]
-                }
-            },
-            "source": "openmaptiles",
-            "source-layer": "building",
-            "type": "fill"
-        },
-
-        {
             "id": "building",
             "minzoom": 14.5,
             "paint": {
-                "fill-color": "#dbd6d6"
+                "fill-color": "#dbd6d6",
+                "fill-opacity": {
+                    "stops": [
+                        [14.5, 0.5],
+                        [15.5, 1]
+                    ]
+                }
             },
             "source": "openmaptiles",
             "source-layer": "building",
@@ -795,14 +782,14 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
-            "minzoom": 13.5,
+            "minzoom": 14.5,
             "paint": {
                 "line-color": "#fefefd",
                 "line-dasharray": [0.01, 2],
                 "line-opacity": {
                     "stops": [
-                        [14, 0.5],
-                        [15, 0.7]
+                        [15, 0.5],
+                        [16, 0.7]
                     ]
                 },
                 "line-width": {
@@ -875,6 +862,34 @@
         },
 
         {
+            "id": "road_mid_outline",
+            "filter": [
+                "all",
+                ["!in", "brunnel", "bridge", "tunnel"],
+                ["in", "class", "secondary", "tertiary"],
+                ["!=", "ramp", 1]
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "minzoom": 9.5,
+            "paint": {
+                "line-color": "#d3d3d2",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [10, 1.5],
+                        [17, 15]
+                    ]
+                }
+            },
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "type": "line"
+        },
+
+        {
             "id": "road_mid",
             "filter": [
                 "all",
@@ -894,6 +909,34 @@
                     "stops": [
                         [10, 1],
                         [17, 12]
+                    ]
+                }
+            },
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "type": "line"
+        },
+
+        {
+            "id": "road_primary_outline",
+            "filter": [
+                "all",
+                ["!in", "brunnel", "bridge", "tunnel"],
+                ["==", "class", "primary"],
+                ["!=", "ramp", 1]
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "minzoom": 6.5,
+            "paint": {
+                "line-color": "#d3d3d2",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [7, 1.5],
+                        [17, 18]
                     ]
                 }
             },
