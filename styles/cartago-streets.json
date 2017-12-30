@@ -1987,6 +1987,7 @@
                 "text-font": ["Noto Sans Regular"],
                 "text-size": {
                     "stops": [
+                        [11, 10],
                         [13, 12],
                         [15, 13]
                     ]
@@ -1994,7 +1995,7 @@
                 "symbol-placement": "line",
                 "symbol-spacing": 200
             },
-            "minzoom": 12.5,
+            "minzoom": 9.5,
             "paint": {
                 "text-color": "#404444",
                 "text-halo-blur": 1,
