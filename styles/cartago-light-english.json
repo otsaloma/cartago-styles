@@ -1550,6 +1550,7 @@
                 "text-font": ["Noto Sans Regular"],
                 "text-size": {
                     "stops": [
+                        [11, 10],
                         [13, 12],
                         [15, 13]
                     ]
@@ -1557,7 +1558,7 @@
                 "symbol-placement": "line",
                 "symbol-spacing": 200
             },
-            "minzoom": 12.5,
+            "minzoom": 9.5,
             "paint": {
                 "text-color": "#404444",
                 "text-halo-blur": 1,
@@ -1567,6 +1568,38 @@
             },
             "source": "openmaptiles",
             "source-layer": "transportation_name",
+            "type": "symbol"
+        },
+
+        {
+            "id": "poi_transit_major",
+            "filter": [
+                "all",
+                ["in", "class", "airfield", "airport", "heliport", "rocket", "railway", "railway_metro"],
+                ["!=", "subclass", "tram_stop"]
+            ],
+            "layout": {
+                "icon-image": "{class}_11",
+                "symbol-avoid-edges": true,
+                "text-anchor": "top",
+                "text-field": "{name_en}",
+                "text-font": ["Noto Sans Regular"],
+                "text-max-width": 8,
+                "text-offset": [0, 0.7],
+                "text-padding": 8,
+                "text-size": 12
+            },
+            "minzoom": 13.5,
+            "paint": {
+                "icon-opacity": 0.85,
+                "text-color": "#0d47a1",
+                "text-halo-blur": 1,
+                "text-halo-color": "#fefefd",
+                "text-halo-width": 1,
+                "text-opacity": 0.85
+            },
+            "source": "openmaptiles",
+            "source-layer": "poi",
             "type": "symbol"
         },
 
