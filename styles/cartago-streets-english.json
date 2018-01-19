@@ -16,7 +16,7 @@
         {
             "id": "background",
             "paint": {
-                "background-color": "#e5e3e1"
+                "background-color": "#e9e7e5"
             },
             "type": "background"
         },
@@ -605,7 +605,7 @@
             "id": "building_outline",
             "minzoom": 14.5,
             "paint": {
-                "line-color": "#bcb8b8",
+                "line-color": "#c0bcbc",
                 "line-opacity": 0.7,
                 "line-width": {
                     "stops": [
@@ -623,7 +623,7 @@
             "id": "building",
             "minzoom": 14.5,
             "paint": {
-                "fill-color": "#dbd6d6",
+                "fill-color": "#dedad9",
                 "fill-opacity": {
                     "stops": [
                         [14.5, 0.5],
@@ -1095,7 +1095,7 @@
             "layout": {
                 "line-join": "round"
             },
-            "minzoom": 15.5,
+            "minzoom": 14.5,
             "paint": {
                 "line-color": "#000000",
                 "line-opacity": 0.2,
@@ -1987,6 +1987,7 @@
                 "text-font": ["Noto Sans Regular"],
                 "text-size": {
                     "stops": [
+                        [11, 10],
                         [13, 12],
                         [15, 13]
                     ]
@@ -1994,7 +1995,7 @@
                 "symbol-placement": "line",
                 "symbol-spacing": 200
             },
-            "minzoom": 12.5,
+            "minzoom": 9.5,
             "paint": {
                 "text-color": "#404444",
                 "text-halo-blur": 1,
