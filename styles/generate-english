@@ -1,0 +1,28 @@
+#!/bin/sh
+
+rm -f cartago-car-english.json
+cp cartago-car.json cartago-car-english.json
+sed -i "s/cartago-car/cartago-car-english/g" cartago-car-english.json
+sed -i "s/Cartago Car/Cartago Car English/g" cartago-car-english.json
+sed -i "s/{name}/{name_en}/g" cartago-car-english.json
+jsonlint -cq cartago-car-english.json
+gron cartago-car-english.json | grep -i cartago
+gron cartago-car-english.json | grep "{name"
+
+rm -f cartago-light-english.json
+cp cartago-light.json cartago-light-english.json
+sed -i "s/cartago-light/cartago-light-english/g" cartago-light-english.json
+sed -i "s/Cartago Light/Cartago Light English/g" cartago-light-english.json
+sed -i "s/{name}/{name_en}/g" cartago-light-english.json
+jsonlint -cq cartago-light-english.json
+gron cartago-light-english.json | grep -i cartago
+gron cartago-light-english.json | grep "{name"
+
+rm -f cartago-streets-english.json
+cp cartago-streets.json cartago-streets-english.json
+sed -i "s/cartago-streets/cartago-streets-english/g" cartago-streets-english.json
+sed -i "s/Cartago Streets/Cartago Streets English/g" cartago-streets-english.json
+sed -i "s/{name}/{name_en}/g" cartago-streets-english.json
+jsonlint -cq cartago-streets-english.json
+gron cartago-streets-english.json | grep -i cartago
+gron cartago-streets-english.json | grep "{name"

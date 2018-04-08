@@ -20,6 +20,12 @@
     "serveAllFonts": true
   },
   "styles": {
+    "cartago-car": {
+      "style": "cartago-car.json"
+    },
+    "cartago-car-english": {
+      "style": "cartago-car-english.json"
+    },
     "cartago-light": {
       "style": "cartago-light.json"
     },

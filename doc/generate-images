@@ -1,0 +1,11 @@
+#!/bin/sh
+PORT=8080
+for STYLE in cartago-car cartago-light cartago-streets; do
+    rm -f 1.png 2.png 3.png 4.png
+    wget -O 1.png http://localhost:$PORT/styles/$STYLE/17/38603/49262@2x.png
+    wget -O 2.png http://localhost:$PORT/styles/$STYLE/17/38604/49262@2x.png
+    wget -O 3.png http://localhost:$PORT/styles/$STYLE/17/38603/49263@2x.png
+    wget -O 4.png http://localhost:$PORT/styles/$STYLE/17/38604/49263@2x.png
+    montage 1.png 2.png 3.png 4.png -geometry 512x512+0+0 -tile 2x2 -background none $STYLE.png
+    rm -f 1.png 2.png 3.png 4.png
+done

@@ -2,7 +2,7 @@
 # Request a bunch of raster tiles from the server for all relevant styles and
 # scale factors to initialize all raster renderers and whatever else not created
 # at server start, but only after the first corresponding request.
-for STYLE in cartago-light cartago-light-english cartago-streets cartago-streets-english; do
+for STYLE in cartago-car cartago-car-english cartago-light cartago-light-english cartago-streets cartago-streets-english; do
     for SCALE in "" @2x @3x @4x; do
         PIDS=""
         for ROUND in $(seq 100); do

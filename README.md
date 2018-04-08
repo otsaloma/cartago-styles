@@ -1,12 +1,16 @@
 Cartago Map Styles
 ==================
 
-<img src="https://otsaloma.io/pub/cartago-streets.png" width="600" alt="Cartago Streets">
-
 A set of map styles for modern vector tile based maps. The styles have
 been written for use with [Tileserver GL](http://tileserver.org/) and
 [OpenMapTiles](https://openmaptiles.org/) vector tiles, but might work
 with small modifications with other servers or tiles.
+
+<img src="doc/cartago-streets.png" width="512" alt="Cartago Streets">
+
+<img src="doc/cartago-car.png" width="512" alt="Cartago Car">
+
+<img src="doc/cartago-light.png" width="512" alt="Cartago Light">
 
 For local development, download the planet from openmaptiles.com, save
 (or symlink) it as `mbtiles/planet.mbtiles` and start the server.
