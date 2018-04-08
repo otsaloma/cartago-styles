@@ -1724,7 +1724,7 @@
 
     {
       "id": "road_name",
-      "filter": ["!=", "class", "service"],
+      "filter": ["!in", "class", "path", "pedestrian", "service", "track"],
       "layout": {
         "text-anchor": "center",
         "text-field": "{name_en}",
