@@ -184,41 +184,6 @@
     },
 
     {
-      "id": "tunnel_pedestrian",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        ["==", "brunnel", "tunnel"],
-        ["in", "class", "path", "pedestrian"]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
-      "minzoom": 14.5,
-      "paint": {
-        "line-color": "#fefefd",
-        "line-dasharray": [0.01, 2],
-        "line-opacity": {
-          "stops": [
-            [15, 0.25],
-            [16, 0.35]
-          ]
-        },
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [15, 2],
-            [17, 3]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "type": "line"
-    },
-
-    {
       "id": "tunnel_tiny",
       "filter": [
         "all",
@@ -581,41 +546,6 @@
     },
 
     {
-      "id": "road_pedestrian",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        ["!in", "brunnel", "bridge", "tunnel"],
-        ["in", "class", "path", "pedestrian"]
-      ],
-      "layout": {
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "minzoom": 14.5,
-      "paint": {
-        "line-color": "#fefefd",
-        "line-dasharray": [1, 2],
-        "line-opacity": {
-          "stops": [
-            [15, 0.5],
-            [16, 0.7]
-          ]
-        },
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [15, 2],
-            [17, 3]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "type": "line"
-    },
-
-    {
       "id": "road_tiny",
       "filter": [
         "all",
@@ -969,41 +899,6 @@
           "stops": [
             [6, 0.5],
             [17, 8]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "type": "line"
-    },
-
-    {
-      "id": "bridge_pedestrian",
-      "filter": [
-        "all",
-        ["==", "$type", "LineString"],
-        ["==", "brunnel", "bridge"],
-        ["in", "class", "path", "pedestrian"]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "minzoom": 14.5,
-      "paint": {
-        "line-color": "#fefefd",
-        "line-dasharray": [0.01, 2],
-        "line-opacity": {
-          "stops": [
-            [15, 0.7],
-            [16, 1]
-          ]
-        },
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [15, 2],
-            [17, 3]
           ]
         }
       },
