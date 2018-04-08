@@ -26,7 +26,8 @@
       "filter": ["==", "class", "wood"],
       "minzoom": 7.5,
       "paint": {
-        "fill-color": "#d6e4cd"
+        "fill-color": "#d6e4cd",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landcover",
@@ -42,7 +43,8 @@
       ],
       "minzoom": 7.5,
       "paint": {
-        "fill-color": "#d6e4cd"
+        "fill-color": "#d6e4cd",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landcover",
@@ -58,7 +60,8 @@
       ],
       "minzoom": 7.5,
       "paint": {
-        "fill-color": "#bae49f"
+        "fill-color": "#bae49f",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landcover",
@@ -69,7 +72,8 @@
       "id": "park",
       "minzoom": 7.5,
       "paint": {
-        "fill-color": "#bae49f"
+        "fill-color": "#bae49f",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "park",
@@ -104,7 +108,8 @@
       "id": "landuse_cemetery",
       "filter": ["==", "class", "cemetery"],
       "paint": {
-        "fill-color": "#d6e4cd"
+        "fill-color": "#d6e4cd",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landuse",
@@ -115,7 +120,8 @@
       "id": "landuse_hospital",
       "filter": ["==", "class", "hospital"],
       "paint": {
-        "fill-color": "#efdbe4"
+        "fill-color": "#efdbe4",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landuse",
@@ -126,10 +132,27 @@
       "id": "landuse_school",
       "filter": ["in", "class", "college", "kindergarten", "school", "university"],
       "paint": {
-        "fill-color": "#efe2d2"
+        "fill-color": "#efe2d2",
+        "fill-opacity": 0.95
       },
       "source": "openmaptiles",
       "source-layer": "landuse",
+      "type": "fill"
+    },
+
+    {
+      "id": "landuse_path",
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["==", "class", "path"]
+      ],
+      "paint": {
+        "fill-color": "#ffffff",
+        "fill-opacity": 0.3
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
       "type": "fill"
     },
 
@@ -163,6 +186,23 @@
       "source": "openmaptiles",
       "source-layer": "waterway",
       "type": "line"
+    },
+
+    {
+      "id": "building",
+      "minzoom": 14.5,
+      "paint": {
+        "fill-color": "#dedcda",
+        "fill-opacity": {
+          "stops": [
+            [15, 0.7],
+            [16, 1]
+          ]
+        }
+      },
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "type": "fill"
     },
 
     {
@@ -602,41 +642,6 @@
     },
 
     {
-      "id": "building_outline",
-      "minzoom": 14.5,
-      "paint": {
-        "line-color": "#c0bcbc",
-        "line-opacity": 0.7,
-        "line-width": {
-          "stops": [
-            [14, 1],
-            [16, 2]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "type": "line"
-    },
-
-    {
-      "id": "building",
-      "minzoom": 14.5,
-      "paint": {
-        "fill-color": "#dedad9",
-        "fill-opacity": {
-          "stops": [
-            [14.5, 0.5],
-            [15.5, 1]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "type": "fill"
-    },
-
-    {
       "id": "aeroway_runway",
       "filter": [
         "all",
@@ -779,13 +784,13 @@
         ["in", "class", "path", "pedestrian"]
       ],
       "layout": {
-        "line-cap": "round",
+        "line-cap": "square",
         "line-join": "round"
       },
       "minzoom": 14.5,
       "paint": {
         "line-color": "#fefefd",
-        "line-dasharray": [0.01, 2],
+        "line-dasharray": [1, 2],
         "line-opacity": {
           "stops": [
             [15, 0.5],
@@ -862,34 +867,6 @@
     },
 
     {
-      "id": "road_mid_outline",
-      "filter": [
-        "all",
-        ["!in", "brunnel", "bridge", "tunnel"],
-        ["in", "class", "secondary", "tertiary"],
-        ["!=", "ramp", 1]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
-      "minzoom": 9.5,
-      "paint": {
-        "line-color": "#d3d3d2",
-        "line-width": {
-          "base": 1.5,
-          "stops": [
-            [10, 1.5],
-            [17, 15]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "type": "line"
-    },
-
-    {
       "id": "road_mid",
       "filter": [
         "all",
@@ -918,34 +895,6 @@
     },
 
     {
-      "id": "road_primary_outline",
-      "filter": [
-        "all",
-        ["!in", "brunnel", "bridge", "tunnel"],
-        ["==", "class", "primary"],
-        ["!=", "ramp", 1]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round"
-      },
-      "minzoom": 6.5,
-      "paint": {
-        "line-color": "#d3d3d2",
-        "line-width": {
-          "base": 1.5,
-          "stops": [
-            [7, 1.5],
-            [17, 18]
-          ]
-        }
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "type": "line"
-    },
-
-    {
       "id": "road_primary",
       "filter": [
         "all",
@@ -959,7 +908,7 @@
       },
       "minzoom": 6.5,
       "paint": {
-        "line-color": "#fefefd",
+        "line-color": "#fffcdb",
         "line-width": {
           "base": 1.5,
           "stops": [
@@ -1524,7 +1473,7 @@
       },
       "minzoom": 6.5,
       "paint": {
-        "line-color": "#fefefd",
+        "line-color": "#fffcdb",
         "line-width": {
           "base": 1.5,
           "stops": [
@@ -1863,7 +1812,7 @@
         "text-padding": 4,
         "text-size": 12
       },
-      "minzoom": 14.5,
+      "minzoom": 13.5,
       "paint": {
         "icon-opacity": 0.85,
         "text-color": "#5d4037",
@@ -1931,7 +1880,7 @@
         "text-padding": 4,
         "text-size": 12
       },
-      "minzoom": 14.5,
+      "minzoom": 13.5,
       "paint": {
         "icon-opacity": 0.85,
         "text-color": "#1b5e20",

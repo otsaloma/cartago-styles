@@ -115,6 +115,17 @@
     },
 
     {
+      "id": "building",
+      "minzoom": 14.5,
+      "paint": {
+        "fill-color": "#e7e7e7"
+      },
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "type": "fill"
+    },
+
+    {
       "id": "tunnel_ramp",
       "filter": [
         "all",
@@ -464,17 +475,6 @@
     },
 
     {
-      "id": "building",
-      "minzoom": 14.5,
-      "paint": {
-        "fill-color": "#e7e7e7"
-      },
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "type": "fill"
-    },
-
-    {
       "id": "aeroway_runway",
       "filter": [
         "all",
@@ -589,13 +589,13 @@
         ["in", "class", "path", "pedestrian"]
       ],
       "layout": {
-        "line-cap": "round",
+        "line-cap": "square",
         "line-join": "round"
       },
       "minzoom": 14.5,
       "paint": {
         "line-color": "#fefefd",
-        "line-dasharray": [0.01, 2],
+        "line-dasharray": [1, 2],
         "line-opacity": {
           "stops": [
             [15, 0.5],
