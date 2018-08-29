@@ -1,6 +1,8 @@
 Cartago Map Styles
 ==================
 
+![Not Maintained](https://img.shields.io/maintenance/no/2018.svg)
+
 A set of map styles for modern vector tile based maps. The styles have
 been written for use with [Tileserver GL](http://tileserver.org/) and
 [OpenMapTiles](https://openmaptiles.org/) vector tiles, but might work
@@ -29,11 +31,6 @@ Cartago Styles is released under the MIT License, see the file
 [`COPYING`](COPYING) for details. Fonts and icons are bundled from
 external sources, see the `fonts` and `sprites` directories for their
 origins and licenses.
-
-## Demos
-
-* <http://cartago.io/maps/vector/>
-* <http://cartago.io/maps/raster/>
 
 ## Resources
 
